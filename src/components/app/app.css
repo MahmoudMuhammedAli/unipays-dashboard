@@ -1,5 +1,24 @@
+body{
+    padding:0;
+    margin:0;
+    height:100vh;
+    width:100vw;
+}
+#root , .app{
+    padding:0;
+    margin:0;
+    height:100vh;
+    width:100vw;
+}
+.app{
+    margin-left:230px;
+
+}
+
+
 a{
     text-decoration: none !important;
+    color:rgb(32, 87, 126) ;
     
 }
 a.selected{

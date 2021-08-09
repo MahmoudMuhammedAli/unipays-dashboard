@@ -9,14 +9,11 @@ import Dashboard from "../dashboard/Dashboard";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Sidebar from "./Sidebar";
 
-
-
 function App() {
-
   return (
-<>
-    <Router>
-       <Sidebar/>
+    <div className="app">
+      <Router>
+        <Sidebar />
         <Switch>
           <Route path="/postjob" component={PostJob} />
           <Route path="/rota" component={Rota} />
@@ -26,8 +23,7 @@ function App() {
           <Route path="/" component={Dashboard} />
         </Switch>
       </Router>
-    </>
+    </div>
   );
 }
-
 export default App;
