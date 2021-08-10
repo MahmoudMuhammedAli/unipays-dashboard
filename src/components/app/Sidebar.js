@@ -1,6 +1,6 @@
 import React from "react";
 import "./app.css";
-import Logo from "../../assets/logo.jpg";
+// import Logo from "../../assets/logo.jpg";
 
 //MATERIAL UI
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -19,7 +19,7 @@ import InsertDriveFileIcon from "@material-ui/icons/InsertDriveFile";
 import ReceiptOutlinedIcon from "@material-ui/icons/ReceiptOutlined";
 import HeadsetMicIcon from "@material-ui/icons/HeadsetMic";
 import Button from "@material-ui/core/Button";
-const drawerWidth = 230;
+const drawerWidth = 220;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,8 +33,8 @@ const useStyles = makeStyles((theme) => ({
   },
   drawerPaper: {
     width: drawerWidth,
-    background: "rgb(2,0,36)",
-    background: "linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%)",
+    background: "rgb(0,0,255)",
+    background: "linear-gradient(0deg, rgba(0,0,255,1) 0%, rgba(0,154,220,1) 40%, rgba(119,214,255,1) 80%)",
   },
   content: {
     flexGrow: 1,
@@ -42,12 +42,15 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(3),
   },
   btn:{
-    width: "120px",
+    width: "140px",
+    height: "30px",
     position:"absolute",
     left: "50%",
     transform: "translateX(-50%)",
-    bottom:"80px",
-    borderRadius:"20px"
+    bottom:"30px",
+    borderRadius:"20px",
+    color:"white",
+    backgroundColor:"rgba(255,255,255,.2)",
   },
   list:{
     position:"absolute",
@@ -64,9 +67,11 @@ const useStyles = makeStyles((theme) => ({
   link:{
     marginLeft:"15px",
     color : " white"
+   
   },
   white:{
-    color:" white"
+    color:" white",
+    textTransform: "capitalize",
   },
   unipays:{
     color:" white",
@@ -75,6 +80,11 @@ const useStyles = makeStyles((theme) => ({
     left: "50%",
     transform: "translate(-50%,-50%)",
     fontWeight:900,
+    fontStyle: "italic",
+   
+  }, 
+  listItem:{
+    marginTop:"18px",
   }
 }));
 
@@ -94,35 +104,36 @@ export default function Sidebar() {
       >
        {/* <img src={Logo} alt="UNIPAYS" className={classes.logo} width="100px" />*/}
       <Typography variant="h5" className={classes.unipays}>
-       UniPays
+       UNIPAYS
       </Typography>
 
         <List className={classes.list}>
-          <ListItem>
+          <ListItem className={classes.listItem}  >
             <DashboardIcon className={classes.white}/>
             <Link className={classes.link} to="/">
               Dashboard
             </Link>
           </ListItem>
-          <ListItem>
+          
+          <ListItem className={classes.listItem}  >
             <WorkOutlineIcon className={classes.white}/>
             <Link className={classes.link} to="/postjob">
               post a job
             </Link>
           </ListItem>
-          <ListItem>
+          <ListItem className={classes.listItem} >
             <EventNoteOutlinedIcon className={classes.white} />
             <Link className={classes.link} to="/rota">
               Rota
             </Link>
           </ListItem>
-          <ListItem>
+          <ListItem className={classes.listItem} >
             <InsertDriveFileIcon className={classes.white}/>
             <Link className={classes.link} to="/timesheets">
               Timesheets
             </Link>
           </ListItem>
-          <ListItem>
+          <ListItem className={classes.listItem} >
             <ReceiptOutlinedIcon className={classes.white}/>
             <Link className={classes.link} to="/Invoices">
               Invoices
@@ -134,9 +145,9 @@ export default function Sidebar() {
           className = {classes.btn }
           variant="contained"
           startIcon={<HeadsetMicIcon />}
-          href="/contact"
+         
         >
-          <Link to="/Contact">Support</Link>
+          <Link to="/Contact" className={classes.white}>Support</Link>
         </Button>
       </Drawer>
     </div>
