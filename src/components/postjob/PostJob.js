@@ -6,11 +6,11 @@ import React from "react";
 
 const useStyles = makeStyles((theme) => ({
   card: {
-    
+    display: "flex",
     background: "rgba(165,199,255,.1)",
     borderRadius: "50px",
-    width: "1000px",
-    height: "500px",
+    width: "1050px",
+    height: "550px",
     padding:"40px",
   },
   text:{
@@ -23,9 +23,9 @@ const useStyles = makeStyles((theme) => ({
       width:"500px"
   },
   rightCard: {
-      width: "200px",
-      height: "100px",
-
+      width: "500px",
+      height: "500px",
+      background: "rgba(0,89,235,1)"
 
   }
 }));
@@ -52,9 +52,9 @@ export default function PostJob() {
           <TextField id="filled-basic" label=" health and safety issues" variant="outlined" className={classes.text}/>
           <TextField id="filled-basic" label="Additional Notes" variant="outlined" className={classes.text}/>      
           </Box>
-          <Card className={classes.rightCard}>
+          <div className={classes.rightCard}>
   
-          </Card>
+          </div>
         </Card>
       </Box>
     </>

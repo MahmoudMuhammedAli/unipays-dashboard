@@ -2,6 +2,7 @@ import React from "react";
 import "./app.css";
 import Invoices from "../invoices/Invoices";
 import Timesheets from "../timesheets/Timesheets";
+import Navbar from "./Navbar";
 import Rota from "../rota/Rota";
 import PostJob from "../postjob/PostJob";
 import Contact from "../contact/Contact";
@@ -22,6 +23,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <div className="app">
         <Router>
+          <Navbar />
           <Sidebar />
           <Switch>
             <Route path="/postjob" component={PostJob} />
