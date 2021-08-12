@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="631.792" height="609.325" viewBox="0 0 631.792 609.325">
+  <defs>
+    <filter id="Rectangle_220" x="37.49" y="18.331" width="594.302" height="590.994" filterUnits="userSpaceOnUse">
+      <feOffset dx="4" dy="4" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#373737" flood-opacity="0.122"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_222" x="18.745" y="9.203" width="594.302" height="590.994" filterUnits="userSpaceOnUse">
+      <feOffset dx="4" dy="4" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-color="#373737" flood-opacity="0.122"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_223" x="0" y="0" width="594.302" height="590.994" filterUnits="userSpaceOnUse">
+      <feOffset dx="4" dy="4" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-3"/>
+      <feFlood flood-color="#373737" flood-opacity="0.122"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_194" data-name="Group 194" transform="translate(5 5)">
+    <g transform="matrix(1, 0, 0, 1, -5, -5)" filter="url(#Rectangle_220)">
+      <rect id="Rectangle_220-2" data-name="Rectangle 220" width="425.191" height="416.152" rx="64" transform="translate(410.72 596.33) rotate(-150)" fill="#fff" opacity="0.04"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -5, -5)" filter="url(#Rectangle_222)">
+      <rect id="Rectangle_222-2" data-name="Rectangle 222" width="425.191" height="416.152" rx="64" transform="translate(391.97 587.2) rotate(-150)" fill="#fff" opacity="0.04"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -5, -5)" filter="url(#Rectangle_223)">
+      <rect id="Rectangle_223-2" data-name="Rectangle 223" width="425.191" height="416.152" rx="64" transform="translate(373.23 577.99) rotate(-150)" fill="#fff" opacity="0.03"/>
+    </g>
+  </g>
+</svg>
+<svg  width="631.792" height="609.325" viewBox="0 0 631.792 609.325">
+  <defs>
+    <filter id="Rectangle_220" x="37.49" y="18.331" width="594.302" height="590.994" filterUnits="userSpaceOnUse">
+      <feOffset dx="4" dy="4" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#373737" flood-opacity="0.122"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_222" x="18.745" y="9.203" width="594.302" height="590.994" filterUnits="userSpaceOnUse">
+      <feOffset dx="4" dy="4" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-color="#373737" flood-opacity="0.122"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_223" x="0" y="0" width="594.302" height="590.994" filterUnits="userSpaceOnUse">
+      <feOffset dx="4" dy="4" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-3"/>
+      <feFlood flood-color="#373737" flood-opacity="0.122"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_194" data-name="Group 194" transform="translate(5 5)">
+    <g transform="matrix(1, 0, 0, 1, -5, -5)" filter="url(#Rectangle_220)">
+      <rect id="Rectangle_220-2" data-name="Rectangle 220" width="425.191" height="416.152" rx="64" transform="translate(410.72 596.33) rotate(-150)" fill="#fff" opacity="0.04"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -5, -5)" filter="url(#Rectangle_222)">
+      <rect id="Rectangle_222-2" data-name="Rectangle 222" width="425.191" height="416.152" rx="64" transform="translate(391.97 587.2) rotate(-150)" fill="#fff" opacity="0.04"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -5, -5)" filter="url(#Rectangle_223)">
+      <rect id="Rectangle_223-2" data-name="Rectangle 223" width="425.191" height="416.152" rx="64" transform="translate(373.23 577.99) rotate(-150)" fill="#fff" opacity="0.03"/>
+    </g>
+  </g>
+</svg>

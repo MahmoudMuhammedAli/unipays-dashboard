@@ -9,12 +9,15 @@ import Contact from "../contact/Contact";
 import Dashboard from "../dashboard/Dashboard";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Sidebar from "./Sidebar";
-import { createMuiTheme, ThemeProvider } from "@material-ui/core";
+import { createTheme, ThemeProvider } from "@material-ui/core";
 
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
     primary: {
       main: "rgba(0,89,235,1)",
+    },
+    secondary: {
+      main: "rgb(255,255,255)",
     },
   },
 });
