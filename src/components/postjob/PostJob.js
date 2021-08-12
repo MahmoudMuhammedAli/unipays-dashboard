@@ -1,13 +1,9 @@
-import React from "react";
-//Material UI
+import React, { useState } from "react";
+import { ReactComponent as CircledArrow } from "../../assets/CircledArrow.svg";
+import { ReactComponent as Rect } from "../../assets/Rect.svg";
 import { Box, Card, Grid, TextField, Typography } from "@material-ui/core";
-// import {
-//   MuiPickersUtilsProvider,
-//   KeyboardDatePicker,
-// } from "@material-ui/pickers";
-// import DateFnsUtils from "@date-io/date-fns";
 import { makeStyles } from "@material-ui/core/styles";
-
+/*Styles*/
 const useStyles = makeStyles((theme) => ({
   card: {
     display: "flex",
@@ -35,10 +31,9 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: "40px",
     paddingTop: "10px",
     boxShadow: "-2px 3px  10px grey;",
+  
   },
-  svgHolder: {
-    zIndex: "-999",
-  },
+
   rightHeader: {
     color: "white",
     fontSize: "18px",
@@ -47,8 +42,8 @@ const useStyles = makeStyles((theme) => ({
   labels: {
     color: "white",
   },
-  timeHolder: {},
-  weekHolder: { width: "250px", marginLeft: "-50px" },
+  timeHolder: { zIndex: "999" },
+  weekHolder: { width: "250px", marginLeft: "-20px" },
 
   week: {
     color: "white",
@@ -68,10 +63,7 @@ const useStyles = makeStyles((theme) => ({
     margin: 10,
     width: "200px",
   },
-  svgHolder: {
-    position: "absolute",
-    zIndex: "0",
-  },
+
   labelHTML: {
     color: "white",
     display: "block",
@@ -122,19 +114,38 @@ const useStyles = makeStyles((theme) => ({
   },
   arrowHolder: {
     position: "absolute",
-    bottom:"-18px",
-    right:"-15px",
+    bottom: "-18px",
+    right: "-15px",
+  },
+  rectangle: {
+    zIndex:"0",
+    position: "absolute",
+    top:"0",
+  },
+  rightFlex:{
+    marginLeft: "70px",
   }
 }));
-
+/*End Styles*/
 export default function PostJob() {
+  //STATES
   const [selectedDate, setSelectedDate] = React.useState(
     new Date("2021-08-18T21:11:54")
   );
+  const [startTime, setStartTime] = useState(0);
+  /*End States*/
+
+  //TODO: implement a form handler for the whole form.
+  /*Handlers*/
+  const handleChange = (e) => {
+    setStartTime(e.target.value);
+  };
+
   const handleDateChange = (date) => {
     setSelectedDate(date);
   };
   const classes = useStyles();
+  /*End Handlers*/
   return (
     <>
       <Box ml={20} mt={4}>
@@ -195,212 +206,8 @@ export default function PostJob() {
               className={classes.text}
             />
           </Box>
-          {/*TODO:RIGHT*/}
-          <div className={classes.rightCard}>
-            <div className={classes.svgHolder}>
-              <svg
-                width="631.792"
-                height="609.325"
-                viewBox="0 0 631.792 609.325"
-              >
-                <defs>
-                  <filter
-                    id="Rectangle_220"
-                    x="37.49"
-                    y="18.331"
-                    width="594.302"
-                    height="590.994"
-                    filterUnits="userSpaceOnUse"
-                  >
-                    <feOffset dx="4" dy="4" input="SourceAlpha" />
-                    <feGaussianBlur stdDeviation="3" result="blur" />
-                    <feFlood floodColor="#373737" floodOpacity="0.122" />
-                    <feComposite operator="in" in2="blur" />
-                    <feComposite in="SourceGraphic" />
-                  </filter>
-                  <filter
-                    id="Rectangle_222"
-                    x="18.745"
-                    y="9.203"
-                    width="594.302"
-                    height="590.994"
-                    filterUnits="userSpaceOnUse"
-                  >
-                    <feOffset dx="4" dy="4" input="SourceAlpha" />
-                    <feGaussianBlur stdDeviation="3" result="blur-2" />
-                    <feFlood flood-color="#373737" floodOpacity="0.122" />
-                    <feComposite operator="in" in2="blur-2" />
-                    <feComposite in="SourceGraphic" />
-                  </filter>
-                  <filter
-                    id="Rectangle_223"
-                    x="0"
-                    y="0"
-                    width="594.302"
-                    height="590.994"
-                    filterUnits="userSpaceOnUse"
-                  >
-                    <feOffset dx="4" dy="4" input="SourceAlpha" />
-                    <feGaussianBlur stdDeviation="3" result="blur-3" />
-                    <feFlood flood-color="#373737" floodOpacity="0.122" />
-                    <feComposite operator="in" in2="blur-3" />
-                    <feComposite in="SourceGraphic" />
-                  </filter>
-                </defs>
-                <g
-                  id="Group_194"
-                  data-name="Group 194"
-                  transform="translate(5 5)"
-                >
-                  <g
-                    transform="matrix(1, 0, 0, 1, -5, -5)"
-                    filter="url(#Rectangle_220)"
-                  >
-                    <rect
-                      id="Rectangle_220-2"
-                      data-name="Rectangle 220"
-                      width="425.191"
-                      height="416.152"
-                      rx="64"
-                      transform="translate(410.72 596.33) rotate(-150)"
-                      fill="#fff"
-                      opacity="0.04"
-                    />
-                  </g>
-                  <g
-                    transform="matrix(1, 0, 0, 1, -5, -5)"
-                    filter="url(#Rectangle_222)"
-                  >
-                    <rect
-                      id="Rectangle_222-2"
-                      data-name="Rectangle 222"
-                      width="425.191"
-                      height="416.152"
-                      rx="64"
-                      transform="translate(391.97 587.2) rotate(-150)"
-                      fill="#fff"
-                      opacity="0.04"
-                    />
-                  </g>
-                  <g
-                    transform="matrix(1, 0, 0, 1, -5, -5)"
-                    filter="url(#Rectangle_223)"
-                  >
-                    <rect
-                      id="Rectangle_223-2"
-                      data-name="Rectangle 223"
-                      width="425.191"
-                      height="416.152"
-                      rx="64"
-                      transform="translate(373.23 577.99) rotate(-150)"
-                      fill="#fff"
-                      opacity="0.03"
-                    />
-                  </g>
-                </g>
-              </svg>
-              <svg
-                width="631.792"
-                height="609.325"
-                viewBox="0 0 631.792 609.325"
-              >
-                <defs>
-                  <filter
-                    id="Rectangle_220"
-                    x="37.49"
-                    y="18.331"
-                    width="594.302"
-                    height="590.994"
-                    filterUnits="userSpaceOnUse"
-                  >
-                    <feOffset dx="4" dy="4" input="SourceAlpha" />
-                    <feGaussianBlur stdDeviation="3" result="blur" />
-                    <feFlood flood-color="#373737" floodOpacity="0.122" />
-                    <feComposite operator="in" in2="blur" />
-                    <feComposite in="SourceGraphic" />
-                  </filter>
-                  <filter
-                    id="Rectangle_222"
-                    x="18.745"
-                    y="9.203"
-                    width="594.302"
-                    height="590.994"
-                    filterUnits="userSpaceOnUse"
-                  >
-                    <feOffset dx="4" dy="4" input="SourceAlpha" />
-                    <feGaussianBlur stdDeviation="3" result="blur-2" />
-                    <feFlood flood-color="#373737" floodOpacity="0.122" />
-                    <feComposite operator="in" in2="blur-2" />
-                    <feComposite in="SourceGraphic" />
-                  </filter>
-                  <filter
-                    id="Rectangle_223"
-                    x="0"
-                    y="0"
-                    width="594.302"
-                    height="590.994"
-                    filterUnits="userSpaceOnUse"
-                  >
-                    <feOffset dx="4" dy="4" input="SourceAlpha" />
-                    <feGaussianBlur stdDeviation="3" result="blur-3" />
-                    <feFlood flood-color="#373737" floodOpacity="0.122" />
-                    <feComposite operator="in" in2="blur-3" />
-                    <feComposite in="SourceGraphic" />
-                  </filter>
-                </defs>
-                <g
-                  id="Group_194"
-                  data-name="Group 194"
-                  transform="translate(5 5)"
-                >
-                  <g
-                    transform="matrix(1, 0, 0, 1, -5, -5)"
-                    filter="url(#Rectangle_220)"
-                  >
-                    <rect
-                      id="Rectangle_220-2"
-                      data-name="Rectangle 220"
-                      width="425.191"
-                      height="416.152"
-                      rx="64"
-                      transform="translate(410.72 596.33) rotate(-150)"
-                      fill="#fff"
-                      opacity="0.04"
-                    />
-                  </g>
-                  <g
-                    transform="matrix(1, 0, 0, 1, -5, -5)"
-                    filter="url(#Rectangle_222)"
-                  >
-                    <rect
-                      id="Rectangle_222-2"
-                      data-name="Rectangle 222"
-                      width="425.191"
-                      height="416.152"
-                      rx="64"
-                      transform="translate(391.97 587.2) rotate(-150)"
-                      fill="#fff"
-                      opacity="0.04"
-                    />
-                  </g>
-                  <g
-                    transform="matrix(1, 0, 0, 1, -5, -5)"
-                    filter="url(#Rectangle_223)"
-                  >
-                    <rect
-                      id="Rectangle_223-2"
-                      data-name="Rectangle 223"
-                      width="425.191"
-                      height="416.152"
-                      rx="64"
-                      transform="translate(373.23 577.99) rotate(-150)"
-                      fill="#fff"
-                      opacity="0.03"
-                    />
-                  </g>
-                </g>
-              </svg>
-            </div>
+          {/*RIGHT*/}
+          <div className={classes.rightCard}>           
             <h2 className={classes.rightHeader}>
               When would you like the candidate's to start?
             </h2>
@@ -408,9 +215,9 @@ export default function PostJob() {
               <Grid
                 container
                 className={classes.topHalf}
-                justifyContent="space-around"
+                justifyContent=""
               >
-                <Grid item>
+                <Grid item >
                   <label className={classes.labelHTML}>Start Date</label>
 
                   <input
@@ -421,12 +228,12 @@ export default function PostJob() {
                     id="startDate"
                   />
                 </Grid>
-                <Grid item>
+                <Grid item className={classes.rightFlex}>
                   <div className={classes.weekHolder}>
                     <p className={classes.week}>Week of: 23/08/2021</p>
                   </div>
                 </Grid>
-                <Grid item>
+                <Grid item >
                   <label className={classes.labelHTML} htmlFor="endDate">
                     End Date
                   </label>
@@ -436,7 +243,7 @@ export default function PostJob() {
                     id="endDate"
                   />
                 </Grid>
-                <Grid item>
+                <Grid item className={classes.rightFlex}>
                   <label className={classes.labelHTML} htmlFor="number">
                     Number of candidate's
                   </label>
@@ -462,6 +269,8 @@ export default function PostJob() {
                     Start time
                   </label>
                   <input
+                    value={startTime}
+                    onChange={handleChange}
                     className={classes.textHTMLDown}
                     type="text"
                     id="StartTime"
@@ -493,66 +302,22 @@ export default function PostJob() {
                 </div>
               </Grid>
             </div>
+            <Rect className={classes.rectangle} />
+
           </div>
         </Card>
       </Box>
       <div className={classes.submitDiv}>
         Post Job
         <div className={classes.arrowHolder}>
-          <svg width="65" height="65" viewBox="0 0 65 65">
-            <defs>
-              <filter
-                id="Ellipse_7"
-                x="0"
-                y="0"
-                width="65"
-                height="65"
-                filterUnits="userSpaceOnUse"
-              >
-                <feOffset dy="3" input="SourceAlpha" />
-                <feGaussianBlur stdDeviation="3" result="blur" />
-                <feFlood flood-opacity="0.161" />
-                <feComposite operator="in" in2="blur" />
-                <feComposite in="SourceGraphic" />
-              </filter>
-            </defs>
-            <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Ellipse_7)">
-              <circle
-                id="Ellipse_7-2"
-                data-name="Ellipse 7"
-                cx="23.5"
-                cy="23.5"
-                r="23.5"
-                transform="translate(56 6) rotate(90)"
-                fill="#fff"
-              />
-            </g>
-            <g
-              id="Iconly_Light-Outline_Arrow_-_Down_2"
-              data-name="Iconly/Light-Outline/Arrow - Down 2"
-              transform="translate(16.281 47.096) rotate(-90)"
-            >
-              <g
-                id="Arrow_-_Down_2"
-                data-name="Arrow - Down 2"
-                transform="translate(6.232 11.364)"
-              >
-                <path
-                  id="Stroke_1"
-                  data-name="Stroke 1"
-                  d="M.322.322A1.1,1.1,0,0,1,1.754.216l.123.106,9.487,9.486L20.851.322A1.1,1.1,0,0,1,22.283.216l.123.106a1.1,1.1,0,0,1,.106,1.432l-.106.123L12.142,12.142a1.1,1.1,0,0,1-1.432.106l-.123-.106L.322,1.877A1.1,1.1,0,0,1,.322.322Z"
-                  transform="translate(0 0)"
-                  fill="#0059eb"
-                />
-              </g>
-            </g>
-          </svg>
+          <CircledArrow />
         </div>
       </div>
     </>
   );
 }
 
+/*A FAILED TRIAL WITH MUI*/
 //  <TextField
 //   id="filled-basic"
 //   label="Start Date"
