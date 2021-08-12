@@ -1,0 +1,24 @@
+.timesheetsView{
+  display:grid;
+  grid-template-columns: 25% auto;
+}
+
+.filters{
+  margin-top:75px;
+  background-color:#d1d1d107;
+  width:fit-content;
+  padding-left: 10px;
+  border-radius: 30px;
+  height: 600px;
+  box-shadow: 5px 5px 5px  rgba(137, 137, 137, 0.116);
+}
+.filtersHeader{
+  font-size:25px;
+  font-weight:bold;
+  color:#6666FF;
+  margin-left: 35px;
+  margin-bottom: 40px;
+}
+.candidates{
+  margin-top:40px;
+}

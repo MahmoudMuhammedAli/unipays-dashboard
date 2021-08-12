@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: "40px",
     paddingTop: "10px",
     boxShadow: "-2px 3px  10px grey;",
-  
+    backgroundImage: 'url("../../assets/Rect.svg")',
   },
 
   rightHeader: {
@@ -118,13 +118,13 @@ const useStyles = makeStyles((theme) => ({
     right: "-15px",
   },
   rectangle: {
-    zIndex:"0",
+    zIndex: "0",
     position: "absolute",
-    top:"0",
+    top: "0",
   },
-  rightFlex:{
+  rightFlex: {
     marginLeft: "70px",
-  }
+  },
 }));
 /*End Styles*/
 export default function PostJob() {
@@ -207,17 +207,13 @@ export default function PostJob() {
             />
           </Box>
           {/*RIGHT*/}
-          <div className={classes.rightCard}>           
+          <div className={classes.rightCard}>
             <h2 className={classes.rightHeader}>
               When would you like the candidate's to start?
             </h2>
             <div className={classes.timeHolder}>
-              <Grid
-                container
-                className={classes.topHalf}
-                justifyContent=""
-              >
-                <Grid item >
+              <Grid container className={classes.topHalf} justifyContent="">
+                <Grid item>
                   <label className={classes.labelHTML}>Start Date</label>
 
                   <input
@@ -233,7 +229,7 @@ export default function PostJob() {
                     <p className={classes.week}>Week of: 23/08/2021</p>
                   </div>
                 </Grid>
-                <Grid item >
+                <Grid item>
                   <label className={classes.labelHTML} htmlFor="endDate">
                     End Date
                   </label>
@@ -303,7 +299,6 @@ export default function PostJob() {
               </Grid>
             </div>
             <Rect className={classes.rectangle} />
-
           </div>
         </Card>
       </Box>

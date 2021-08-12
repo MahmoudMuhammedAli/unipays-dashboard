@@ -1,9 +1,40 @@
-import React from 'react'
+import React from "react";
+import "./timesheets.css";
+import { ReactComponent as Filters } from "../../assets/filters.svg";
+//Dummy Data
+let candidates = [
+  {
+    id: "1",
+    name: "Tomas Wellens",
+    timesheetsNumber: "11114",
+    hours: "16hrs",
+    payment: "Standard Pay",
+  },
+  {
+    id: "2",
+    name: "Mahmoud Ali",
+    timesheetsNumber: "11514",
+    hours: "16hrs",
+    payment: "Standard Pay",
+  },
+];
 
 export default function Timesheets() {
-    return (
-        <div>
-            <h1>timesheets</h1>
+  return (
+    <div className="timesheetsView">
+      <div className="filters">
+        <h3 className="filtersHeader">Filters</h3>
+        {/*TODO: implement the filter calender*/}
+        <Filters />
+      </div>
+      <div className="candidates">
+        <h1 className="candsHeader">Candidates</h1>
+        <h2 className="candsHeader">Overview </h2>
+        <p className="candsHeader">{candidates.length} Candidates </p>
+        <div className="cadidateHolder">
+          
         </div>
-    )
+      </div>
+    </div>
+  );
 }

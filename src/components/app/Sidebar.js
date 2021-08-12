@@ -1,6 +1,6 @@
 import React from "react";
 import "./app.css";
-// import Logo from "../../assets/logo.jpg";
+import { ReactComponent as Logo } from "../../assets/logo.svg";
 
 //MATERIAL UI
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -19,7 +19,7 @@ import InsertDriveFileIcon from "@material-ui/icons/InsertDriveFile";
 import ReceiptOutlinedIcon from "@material-ui/icons/ReceiptOutlined";
 import HeadsetMicIcon from "@material-ui/icons/HeadsetMic";
 import Button from "@material-ui/core/Button";
-const drawerWidth = 220;
+const drawerWidth = 210;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
   drawerPaper: {
     width: drawerWidth,
     background: "rgb(0,0,255)",
-    background: "linear-gradient(0deg, rgba(0,0,255,1) 0%, rgba(0,154,220,1) 40%, rgba(119,214,255,1) 80%)",
+    background: "linear-gradient(0deg, rgba(0,0,255,1) 0%, rgba(0,153,220,1) 50%, rgba(0,153,220,1) 100%) ",
   },
   content: {
     flexGrow: 1,
@@ -74,13 +74,11 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "capitalize",
   },
   unipays:{
-    color:" white",
     position:"absolute",
     top: "10%",
     left: "50%",
     transform: "translate(-50%,-50%)",
-    fontWeight:900,
-    fontStyle: "italic",
+    width: "55%",
    
   }, 
   listItem:{
@@ -102,10 +100,11 @@ export default function Sidebar() {
         }}
         anchor="left"
       >
-       {/* <img src={Logo} alt="UNIPAYS" className={classes.logo} width="100px" />*/}
+       {/* <img src={Logo} alt="UNIPAYS" className={classes.logo} width="100px" />
       <Typography variant="h5" className={classes.unipays}>
        UNIPAYS
-      </Typography>
+      </Typography>*/}
+      <Logo className={classes.unipays}/>
 
         <List className={classes.list}>
           <ListItem className={classes.listItem}  >
