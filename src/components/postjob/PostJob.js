@@ -298,7 +298,6 @@ export default function PostJob() {
                 </div>
               </Grid>
             </div>
-            <Rect className={classes.rectangle} />
           </div>
         </Card>
       </Box>
