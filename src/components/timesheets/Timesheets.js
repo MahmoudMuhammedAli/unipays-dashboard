@@ -1,5 +1,6 @@
 import React from "react";
 import "./timesheets.css";
+import Candidate from "./Candidate"
 import { ReactComponent as Filters } from "../../assets/filters.svg";
 //Dummy Data
 let candidates = [
@@ -19,6 +20,12 @@ let candidates = [
   },
 ];
 
+// useEffect(() => {
+//   effect
+//   return () => {
+//     cleanup
+//   }
+// }, [input])
 export default function Timesheets() {
   return (
     <div className="timesheetsView">
@@ -32,7 +39,7 @@ export default function Timesheets() {
         <h2 className="candsHeader">Overview </h2>
         <p className="candsHeader">{candidates.length} Candidates </p>
         <div className="cadidateHolder">
-          
+          {candidates.map(candidate =><Candidate user={candidate}/>)}
         </div>
       </div>
     </div>
